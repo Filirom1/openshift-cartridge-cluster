@@ -33,6 +33,7 @@ Cart-Data:
 Group-Overrides:
   - components:
     - nodejs
+    - web_proxy
 Subscribes:
   set-db-connection-info:
     Type: "ENV:NET_TCP:db:connection-info"
