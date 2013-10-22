@@ -1,0 +1,6 @@
+#!/bin/bash
+
+# Exit on any errors
+set -e
+
+echo $@ >> "$OPENSHIFT_NODEJS_LOG_DIR/set-simple-cluster.log"
