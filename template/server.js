@@ -10,5 +10,10 @@ dns.resolve4(os.hostname(), function(err, ips){
 
 http.createServer(function (req, res) {
   res.writeHead(200, {'Content-Type': 'text/plain'});
-  res.end(JSON.stringify(process.env);
+  res.end(JSON.stringify(process.env));
 }).listen(process.env.OPENSHIFT_NODEJS_PORT, process.env.OPENSHIFT_NODEJS_IP);
+
+http.createServer(function (req, res) {
+  res.writeHead(200, {'Content-Type': 'text/plain'});
+  res.end(JSON.stringify(process.env));
+}).listen(process.env.OPENSHIFT_NODEJS_CLUSTER_PORT, process.env.OPENSHIFT_NODEJS_IP);
